@@ -1,19 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
-import { HeaderComponent } from './header/header.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import feather from 'feather-icons';
 
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   template: `
-    <app-header></app-header>
+    <app-landing-page></app-landing-page>
   `,
-  styleUrl: './app.component.css',
-  imports: [HomeComponent, HeaderComponent]
+  styleUrls: ['./app.component.scss'],
+  imports: [LandingPageComponent]
 })
-export class AppComponent {
-  title = 'WeCoding';
+
+
+  export class AppComponent implements AfterViewInit {
+    ngAfterViewInit(): void {
+      feather.replace(); // Initialize feather icons after view is loaded
+    }
+    title = 'WeCoding';
 }
 
 
