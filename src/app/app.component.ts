@@ -1,3 +1,5 @@
+// app.component.ts file
+
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -5,8 +7,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { FooterComponent } from './components/shared/footer/footer.component';
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
-    RouterOutlet,
     NavbarComponent,
     LandingPageComponent,
     FooterComponent
@@ -16,7 +18,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     <app-landing-page></app-landing-page>
     <app-footer></app-footer>
   `,
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {

@@ -1,0 +1,30 @@
+// pricing.component.scss file
+.pricing-table {
+  .pricing-list{
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+      li {
+          margin-bottom: 1rem;
+          font-size: 1.05rem;
+          font-weight: 500;
+      }
+  }
+
+  .card {
+      transition: all .25s ease-out;
+      text-align: center;
+
+      .card-body {
+          padding: 2.25rem 2rem;
+      }
+
+      &.active {
+          color: white;
+          background-color: transparent;
+
+          h2, h3 {
+              color: $white;
+          }
+      }
+  }
+}

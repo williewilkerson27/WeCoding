@@ -1,0 +1,32 @@
+/*features.component.scss file*/
+.feature-boxes {
+  text-align: center;
+
+  .box {
+      padding: 3rem;
+  }
+}
+
+/*features-list */
+.features-list {
+  list-style: none;
+
+  li {
+      float: left;
+      width: 50%;
+      margin-top: 0;
+      margin-bottom: 1.75rem;
+      font-size: 1.05rem;
+      padding-left: 1.75rem;
+      font-weight: 500;
+
+      &:before {
+          position: relative;
+          font-family: FontAwesome;
+          font-size: 14px;
+          content: "\f10c";
+          color: $primary;
+          margin: 0 .75rem 0 0;
+      }
+  }
+}
